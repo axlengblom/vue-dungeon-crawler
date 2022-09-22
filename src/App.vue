@@ -2,7 +2,7 @@
   <div id="app"></div>
   <div class="header"><h2>Dungeon Raider</h2></div>
   <Login />
-  <p>{{ user.loggedIn }}</p>
+  <p>Reactive:</p>
   <div class="game"><h3>Game</h3></div>
 </template>
 
