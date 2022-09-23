@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h3>{{ user.name }}</h3>
+    <input :value="user.name" placeholder="Choose a name" />
+    <br />
+    <button @click="create">Create Character</button>
   </div>
 </template>
 
@@ -13,6 +15,15 @@ export default {
     return {
       user,
     };
+  },
+  methods: {
+    create() {
+      const userName = user.name;
+
+      console.log(user.name);
+      user.loggedIn = true;
+      console.log(user.loggedIn);
+    },
   },
 };
 </script>
