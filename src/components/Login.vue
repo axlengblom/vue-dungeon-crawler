@@ -1,12 +1,18 @@
 <template>
-  <div><h3></h3></div>
+  <div>
+    <h3>{{ user.name }}</h3>
+  </div>
 </template>
 
 <script>
-import { reactive } from 'vue';
+import { user } from '../app.js';
 
-export const user = reactive({ name: '', loggedIn: 'false' });
 export default {
   name: 'Login',
+  data() {
+    return {
+      user,
+    };
+  },
 };
 </script>

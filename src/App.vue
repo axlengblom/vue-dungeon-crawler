@@ -2,20 +2,19 @@
   <div id="app"></div>
   <div class="header"><h2>Dungeon Raider</h2></div>
   <Login />
-  <p>Reactive:</p>
+
   <div class="game"><h3>Game</h3></div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue';
-import { Login, user } from './components/Login.vue';
+import Login from './components/Login.vue';
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
     Login,
-    user,
   },
 };
 </script>
