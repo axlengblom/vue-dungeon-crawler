@@ -1,5 +1,6 @@
 <template>
   <h1>Welcome to {{ room }}</h1>
+  <slot></slot>
 </template>
 
 <script>
