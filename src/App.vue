@@ -3,18 +3,25 @@
   <div class="header"><h2>Dungeon Raider</h2></div>
   <Login />
 
-  <div class="game"><h3>Game</h3></div>
+  <Game :room="roomName" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import Game from './components/Game.vue';
 import Login from './components/Login.vue';
 
 export default {
   name: 'App',
+
   components: {
-    HelloWorld,
     Login,
+    Game,
+  },
+
+  data() {
+    return {
+      roomName: 'Room 1',
+    };
   },
 };
 </script>
