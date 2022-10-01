@@ -3,7 +3,7 @@
   <div class="header"><h2>Dungeon Raider</h2></div>
   <Login />
 
-  <Game> </Game>
+  <Game @onshowUrl="showUrl(monster)"> </Game>
 </template>
 
 <script>
@@ -20,6 +20,11 @@ export default {
 
   data() {
     return {};
+  },
+  methods: {
+    showUrl() {
+      console.log('fisk');
+    },
   },
 };
 </script>

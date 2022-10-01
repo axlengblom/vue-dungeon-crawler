@@ -1,7 +1,7 @@
 <template>
   <div v-for="monster in monsters" :key="monster.index">
     <h1>{{ monster.name }}</h1>
-    <button @click="showUrl(monster.url)">More Info</button>
+    <button @click="$emit('onshowUrl', monster)">More Info</button>
   </div>
 </template>
 
@@ -13,14 +13,7 @@ export default {
       currentMonster: [],
     };
   },
-  methods: {
-    showUrl(monsterUrl) {
-      fetch('https://www.dnd5eapi.co' + monsterUrl)
-        .then((res) => res.json())
-        .then((data) => (this.currentMonster = data));
-      console.log(this.currentMonster);
-    },
-  },
+  methods: {},
   mounted() {
     fetch('https://www.dnd5eapi.co/api/monsters')
       .then((response) => response.json())
